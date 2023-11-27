@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --fill: #3498db;
+  --empty: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  text-align: center;
+}
+.progress-container::before {
+  content: "";
+  height: 5px;
+  background-color: var(--empty);
+  position: absolute;
+  width: 100%;
+  z-index: -5;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  width: 350px;
+  position: relative;
+}
+.progress {
+  height: 5px;
+  background-color: var(--fill);
+  position: absolute;
+  width: 0%;
+  z-index: -1;
+  left: 0px;
+}
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--empty);
+  background-color: #fff;
+  color: #888;
+}
+.circle.active {
+  border-color: var(--fill);
+}
+
+.btn {
+  padding: 5px 20px;
+  border-radius: 6px;
+  text-align: center;
+  border: inherit;
+  background-color: var(--fill);
+  color: #fff;
+  cursor: pointer;
+  margin: 5px;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--empty);
+}
