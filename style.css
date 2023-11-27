@@ -46,6 +46,7 @@ body {
   width: 0%;
   z-index: -1;
   left: 0px;
+  transition: 0.5s ease;
 }
 .circle {
   display: flex;
@@ -57,6 +58,7 @@ body {
   border: 2px solid var(--empty);
   background-color: #fff;
   color: #888;
+  transition: 0.5s ease-in-out;
 }
 .circle.active {
   border-color: var(--fill);
